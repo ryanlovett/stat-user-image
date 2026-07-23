@@ -40,7 +40,7 @@ RUN code-server --extensions-dir ${VSCODE_EXTENSIONS} --install-extension ms-too
 # R packages
 # ------------------------------------------------------------
 WORKDIR /home/${NB_USER}
-COPY install.r /tmp/install.r
+COPY --chown=${NB_USER}:${NB_USER} install.r /tmp/install.r
 RUN Rscript /tmp/install.r && rm -rf /tmp/install.r /tmp/downloaded_packages/ /tmp/*.rds
 
 EXPOSE 8888
