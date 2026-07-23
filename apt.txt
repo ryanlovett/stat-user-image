@@ -1,0 +1,6 @@
+# fonts used in some course materials/plots
+fonts-symbola
+
+# texlive-xetex/texlive-fonts-recommended/texlive-plain-generic are already
+# in base-python-image; this adds the extras our PDF rendering needs
+texlive-fonts-extra

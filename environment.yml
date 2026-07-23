@@ -1,0 +1,15 @@
+name: stat
+
+channels:
+- conda-forge
+
+dependencies:
+# jupyterbook
+- mystmd==1.3.28
+
+- shiny==1.4.0
+- pip:
+  # Measure popularity of different packages in our hubs
+  # https://discourse.jupyter.org/t/request-for-implementation-instrument-libraries-actively-used-by-users-on-a-jupyterhub/7994?u=yuvipanda
+  - git+https://github.com/shaneknapp/python-popularity-contest.git@add-error-handling
+  - jupyterlab-quarto==0.3.5
