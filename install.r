@@ -11,33 +11,26 @@ if (length(new_packages) > 0) {
 
 packages <- c(
   "cobalt@4.6.2",
-  "countdown@0.4.0",
+  "countdown@0.6.0",
   "fivethirtyeight@0.6.2",
-  "gapminder@1.0.0",
-  "ggrepel@0.9.6",
-  "ggthemes@5.1.0",
-  "gt@0.11.1",
-  "infer@1.0.8",
-  "janitor@2.2.1",
-  "kableExtra@1.4.0",
-  "latex2exp@0.9.6",
+  "gapminder@1.0.1",
+  "ggrepel@0.9.8",
+  "gt@1.3.0",
   "markdown@2.0",
   "MatchIt@4.7.2",
   "openintro@2.5.0",
-  "pagedown@0.22",
+  "pagedown@0.24",
   "palmerpenguins@0.1.1",
-  "patchwork@1.3.0",
   "plotly@4.10.4",
-  "quarto@1.4.4",
-  "reshape2@1.4.4",
-  "rsample@1.3.0",
+  "quarto@1.5.1",
+  "reshape2@1.4.5",
+  "rsample@1.3.2",
   "showtext@0.9-7",
   "swirl@2.4.5",
   "tidycensus@1.7.1",
-  "tidymodels@1.3.0",
-  "tigris@2.2.1",
+  "tidymodels@1.5.0",
   "unvotes@0.3.0",
-  "xaringanthemer@0.4.3"
+  "xaringanthemer@0.4.4"
 
   # When adding or removing packages, note that the last package in this list
   # should not have a trailing comma, but every other package should.
@@ -49,7 +42,7 @@ packages <- c(
 
 renv::install(packages)
 
-pak::pak("mdbeckman/dcData@a900560")
+pak::pak("mdbeckman/dcData@d72ca9e")
 pak::pak("hadley/emo@3f03b11")
 pak::pak("andrewpbray/boxofdata@8afd934")
 pak::pak("stat20/stat20data@2536a78")
