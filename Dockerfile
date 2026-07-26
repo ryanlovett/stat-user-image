@@ -1,4 +1,4 @@
-FROM us-central1-docker.pkg.dev/ucb-datahub-2018/base-images-repo/base-r-image:0d6b5ea
+FROM us-central1-docker.pkg.dev/ucb-datahub-2018/base-images-repo/base-r-image:9ebd323
 
 # ------------------------------------------------------------
 # System packages
