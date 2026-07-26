@@ -43,5 +43,18 @@ WORKDIR /home/${NB_USER}
 COPY --chown=${NB_USER}:${NB_USER} install.r /tmp/install.r
 RUN Rscript /tmp/install.r && rm -rf /tmp/install.r /tmp/downloaded_packages/ /tmp/*.rds
 
+# ------------------------------------------------------------
+# Positron Server
+# ------------------------------------------------------------
+USER root
+RUN wget --quiet -O /tmp/positron-server.tar.gz \
+      https://cdn.posit.co/positron/releases/server/x86_64/positron-server-linux-x64-2026.07.0-365.tar.gz && \
+    mkdir -p /opt/positron-server && \
+    tar -xzf /tmp/positron-server.tar.gz -C /opt/positron-server --strip-components=1 && \
+    rm /tmp/positron-server.tar.gz && \
+    ln -s /opt/positron-server/bin/positron-server ${CONDA_DIR}/envs/notebook/bin/positron-server
+
+USER ${NB_USER}
+
 EXPOSE 8888
 ENTRYPOINT ["tini", "--"]
