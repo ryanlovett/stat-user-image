@@ -11,4 +11,4 @@ dependencies:
   # https://discourse.jupyter.org/t/request-for-implementation-instrument-libraries-actively-used-by-users-on-a-jupyterhub/7994?u=yuvipanda
   - git+https://github.com/shaneknapp/python-popularity-contest.git@add-error-handling
   - jupyterlab-quarto==0.3.5
-  - jupyter-positron-server>=0.0.5
+  - jupyter-positron-server==0.0.5

@@ -48,7 +48,7 @@ RUN Rscript /tmp/install.r && rm -rf /tmp/install.r /tmp/downloaded_packages/ /t
 # ------------------------------------------------------------
 USER root
 RUN wget --quiet -O /tmp/positron-server.tar.gz \
-      https://cdn.posit.co/positron/releases/server/x86_64/positron-server-linux-x64-2026.07.0-365.tar.gz && \
+      https://cdn.posit.co/positron/releases/server/x86_64/positron-server-linux-x64-2026.07.1-5.tar.gz && \
     mkdir -p /opt/positron-server && \
     tar -xzf /tmp/positron-server.tar.gz -C /opt/positron-server --strip-components=1 && \
     rm /tmp/positron-server.tar.gz && \
